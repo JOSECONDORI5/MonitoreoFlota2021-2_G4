@@ -4,8 +4,8 @@ import monitoreo.modelos.interfaces.ITransporteStrategy;
 
 public class CamionStrategy implements ITransporteStrategy {
 
-    private int MaxPuntos=15;
-    private double MaxPeso=1500;
+    private int MaxPuntos=40;
+    private double MaxPeso=2100;
     private Double[][] puntosEntregaVariado;
     private double peso=0;
     
