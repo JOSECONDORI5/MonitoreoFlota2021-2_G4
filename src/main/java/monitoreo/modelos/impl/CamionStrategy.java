@@ -4,12 +4,14 @@ import monitoreo.modelos.interfaces.ITransporteStrategy;
 
 public class CamionStrategy implements ITransporteStrategy {
 
-    public Double[][] crearPuntos(Double[][] puntos) {
-    
     private int MaxPuntos=15;
     private double MaxPeso=1500;
     private Double[][] puntosEntregaVariado;
     private double peso=0;
+    
+    public Double[][] crearPuntos(Double[][] puntos) {
+    
+  
 
          puntosEntregaVariado = new  Double[][]{
             {-12.054456, -77.083491},
