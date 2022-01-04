@@ -5,7 +5,7 @@ import monitoreo.modelos.interfaces.ITransporteStrategy;
 public class MotoStrategy implements ITransporteStrategy {
 
     
-    private int MaxPuntos=8;
+    private int MaxPuntos=10;
     private double MaxPeso=50;
     private Double[][] puntosEntregaVariado;
     private double peso=0;
@@ -13,7 +13,7 @@ public class MotoStrategy implements ITransporteStrategy {
     public Double[][] crearPuntos(Double[][] puntos) {
 
         puntosEntregaVariado = new  Double[][]{
-                {-12.054456, -77.083491},
+               {-12.054456, -77.083491},
                 {-12.056025, -77.081278},
                 {-12.056520, -77.080370},
                 {-12.057158, -77.079955},
