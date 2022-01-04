@@ -100,9 +100,13 @@ public class Ventana extends Application {
 
 
         // Strategy, algoritmos de creacion de ruta
-        Double[][] puntos = {
+       /* Double[][] puntos = {
             {-12.054456, -77.083491},
             {-12.059279, -77.075558}
+        };*/
+        Double[][] puntos = {
+            {-12.054456, -77.083491, 50.1},
+            {-12.059279, -77.075558, 130.2}
         };
         Transporte transporteContext = new Transporte();
         //transporteContext.setStrategy(new CamionStrategy());
