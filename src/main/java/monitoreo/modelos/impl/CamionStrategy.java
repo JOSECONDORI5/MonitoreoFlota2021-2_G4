@@ -5,8 +5,13 @@ import monitoreo.modelos.interfaces.ITransporteStrategy;
 public class CamionStrategy implements ITransporteStrategy {
 
     public Double[][] crearPuntos(Double[][] puntos) {
+    
+    private int MaxPuntos=15;
+    private double MaxPeso=1500;
+    private Double[][] puntosEntregaVariado;
+    private double peso=0;
 
-        Double[][] puntosEntregaVariado = {
+         puntosEntregaVariado = new  Double[][]{
             {-12.054456, -77.083491},
             {-12.053510, -77.084607},
             {-12.051269, -77.085371},
@@ -24,5 +29,19 @@ public class CamionStrategy implements ITransporteStrategy {
             {-12.059279, -77.075558}
         };
         return puntosEntregaVariado;
+    }
+       public void AgregarPuntos(Double[][] puntos){
+        if(MaxPuntos-puntosEntregaVariado.length>1){
+            puntosEntregaVariado[puntosEntregaVariado.length+1][0]=puntos[0][0];
+            puntosEntregaVariado[puntosEntregaVariado.length+1][1]=puntos[0][1];
+            if(peso+puntos[0][2]<MaxPeso){
+                System.out.println("Peso excedido para el camión");
+            }else{
+                peso+=puntos[0][2];
+            }
+        }else{
+            System.out.println("Se alcanzó el límite de puntos");
+        }
+      
     }
 }
